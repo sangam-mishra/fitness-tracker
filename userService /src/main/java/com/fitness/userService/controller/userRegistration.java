@@ -1,4 +1,4 @@
-package controller;
+package com.fitness.userService.controller;
 
 public class userRegistration {
     private String User;

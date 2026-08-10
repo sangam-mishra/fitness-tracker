@@ -1,9 +1,8 @@
-package model;
+package com.fitness.userService.model;
 
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 public class user {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private int id;
+    private String id;
 
     @Column(unique = true,nullable = false)
     private String userName;
