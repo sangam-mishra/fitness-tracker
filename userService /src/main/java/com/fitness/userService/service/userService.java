@@ -15,6 +15,10 @@ public class userService {
     private UserRepository repository;
 
     public UserResponse register(@Valid registerRequest request) {
+
+        if(repository.existsByuserName(request.getUserName())){
+            throw new RuntimeException("username already registered "+request.getUserName());
+        }
         User user=new User();
         user.setUserName(request.getUserName());
         user.setPassword(request.getPassword());
