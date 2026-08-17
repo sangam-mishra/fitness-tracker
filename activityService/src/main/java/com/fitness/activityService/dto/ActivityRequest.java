@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public class ActivityResponse {
+public class ActivityRequest {
     private String id;
     private String UserId;
     private ActivityType type;
@@ -22,5 +22,5 @@ public class ActivityResponse {
     @CreatedDate
     private LocalDateTime createdAt;
     @LastModifiedDate
-    private LocalDateTime updatedAt;  
+    private LocalDateTime updatedAt;
 }
