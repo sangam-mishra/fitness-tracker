@@ -13,6 +13,11 @@ public class ActivityService {
 
     private final ActivityRepository repository;
     public ActivityResponse getActivity(String activityId) {
+        Activity activity = repository.findById(activityId).orElseThrow(()->new RuntimeException("Actvity for the user not found"));
+
+        ActivityResponse fetchedActivity= mapToResponse(activity);
+
+        return fetchedActivity;
     }
 
     public ActivityResponse trackActivity(ActivityRequest request) {
