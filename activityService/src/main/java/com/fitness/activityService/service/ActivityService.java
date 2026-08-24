@@ -16,7 +16,6 @@ public class ActivityService {
         Activity activity = repository.findById(activityId).orElseThrow(()->new RuntimeException("Actvity for the user not found"));
 
         ActivityResponse fetchedActivity= mapToResponse(activity);
-
         return fetchedActivity;
     }
 
