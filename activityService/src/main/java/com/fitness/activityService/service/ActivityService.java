@@ -17,6 +17,7 @@ public class ActivityService {
 
         ActivityResponse fetchedActivity= mapToResponse(activity);
         return fetchedActivity;
+        
     }
 
     public ActivityResponse trackActivity(ActivityRequest request) {
